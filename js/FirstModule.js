@@ -9,7 +9,7 @@ app.controller("FirstController",function($scope,$http) {
 	{id:4,name:"Mogens",Born:"2010-07-21"}
 ];*/
 
-$http.get("data/Persons.data").
+$http.get("data/Persons.html").
 	success(function(data) {
 		$scope.persons = data;
 	});
