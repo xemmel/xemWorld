@@ -11,6 +11,9 @@ app.controller("FirstController",function($scope,$http) {
 
 $http.get("data/Persons.html").
 	success(function(data) {
+		console.log("suc");
+		console.log(data);
+		
 		$scope.persons = data;
 	});
 
