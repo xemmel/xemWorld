@@ -2,51 +2,16 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Xemmel World!</title>
+		<title>New Angular</title>
 		<script src="js\angular.js"></script>
-		<script src="js\myModule.js"></script>
+		<script src="js\FirstModule.js"></script>
+
 		<link rel="stylesheet" href="css\bootstrap.css"></link>
 	</head>
-	<body>
-		<div ng-app="worldModule" ng-controller="worldController">
-
-			<div class="well container">
-							<h1>World Countries</h1>
-				<div class="row">
-					<div class="col-lg-3">
-						<label class="a">Country Filter:</label>
-						 <input text="text" ng-model="search.Name" class="form-control"/>
-					</div>
-						<div class="col-lg-3">
-						<label class="a">Capital Filter:</label>
-						 <input text="text" ng-model="search.Capital" class="form-control"/>
-					</div>
-
-					<div class="col-lg-3">
-						<label class="a">Continent Filter:</label>
-						 <input text="text" ng-model="search.Continent" class="form-control"/>
-					</div>
-
-				</div>
-					<table class="table table-striped table-hover">
-				<thead>
-					<th class="col-md-3">Country</th>
-					<th class="col-md-3">Capital</th>
-					<th class="col-md-2">Continent</th>
-				</thead>
-				<tbody>
-					<tr ng-repeat="country in countries.$values | filter:search">
-						<td>{{country.Name}}</td>
-						<td>{{country.Capital}}</td>
-						<td>{{country.Continent}}</td>
-						
-					</tr>
-				</tbody>
-			</table>
-			</div>
-		
-		
-			
+	<body ng-app="FirstModule">
+		<div class="well" ng-controller="FirstController">
+			<input type="text" ng-model="nameInput" />
+			Hello there {{nameInput}}
 		</div>
 	</body>
 </html>
