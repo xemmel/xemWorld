@@ -15,6 +15,8 @@ $http.get("data/Persons.html").
 		console.log(data);
 		
 		$scope.persons = data;
+	}).error(function() {
+		console.log("error");
 	});
 
 console.log($scope.persons);
